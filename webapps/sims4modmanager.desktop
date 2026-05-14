@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Sims 4 Mod Manager
+Comment=Gestor de Mods para Los Sims 4
+Exec=protontricks-launch --appid 1222670 "/home/elyefris/.local/share/Steam/steamapps/compatdata/1222670/pfx/drive_c/users/steamuser/AppData/Local/Programs/s4mm/Sims 4 Mod Manager.exe"
+Icon=steam
+Terminal=false
+Type=Application
+Categories=Game;Utility;

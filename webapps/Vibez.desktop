@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Vibez
+Comment=Vibez
+Exec=xdg-terminal-exec --app-id=TUI.tile -e vibez
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/Vibez.png
+StartupNotify=true
