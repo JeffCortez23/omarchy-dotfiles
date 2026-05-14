@@ -75,6 +75,7 @@ fzf
 gamemode
 gconf
 gemini-cli
+geoclue
 ghostty
 git
 github-cli
