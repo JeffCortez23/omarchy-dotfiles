@@ -1,0 +1,24 @@
+[Desktop Entry]
+Name=Lutris
+StartupWMClass=net.lutris.Lutris
+Comment=Video Game Preservation Platform
+Categories=Game;PackageManager;
+Keywords=gaming;wine;emulator;
+Exec="/home/elyefris/Applications/Lutris-1" %U
+Icon=net.lutris.Lutris
+Type=Application
+StartupNotify=true
+MimeType=x-scheme-handler/lutris;application/x-lutris;
+X-GNOME-UsesNotifications=true
+
+X-AppImage-Name=Lutris
+X-AppImage-Version=0.5.22-1
+X-AppImage-Arch=x86_64
+Actions=Uninstall;
+X-AppImage-Homepage=https://github.com/pkgforge-dev/Lutris-AppImage
+X-AppImage-UpdateURL=https://github.com/pkgforge-dev/Lutris-AppImage
+
+[Desktop Action Uninstall]
+Name=Move to Trash
+Exec=/home/elyefris/Applications/AppManager uninstall "/home/elyefris/Applications/Lutris-1"
+Icon=user-trash

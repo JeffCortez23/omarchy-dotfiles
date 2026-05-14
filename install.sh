@@ -20,8 +20,6 @@ fi
 if [ -f "$DOTFILES_DIR/scripts/pkg_aur.txt" ] && command -v yay >/dev/null; then
     echo "📦 Installing AUR packages (yay)..."
     yay -S --needed --noconfirm - < "$DOTFILES_DIR/scripts/pkg_aur.txt" || echo "⚠️ Some AUR packages failed to install."
-elif [ -f "$DOTFILES_DIR/scripts/pkg_aur.txt" ]; then
-    echo "⚠️ yay (AUR helper) not found. Skipping AUR packages. Install yay first if needed."
 fi
 
 if [ -f "$DOTFILES_DIR/scripts/pkg_flatpak.txt" ] && command -v flatpak >/dev/null; then
@@ -31,36 +29,55 @@ if [ -f "$DOTFILES_DIR/scripts/pkg_flatpak.txt" ] && command -v flatpak >/dev/nu
     done < "$DOTFILES_DIR/scripts/pkg_flatpak.txt"
 fi
 
+if [ -f "$DOTFILES_DIR/scripts/pkg_npm.txt" ] && command -v npm >/dev/null; then
+    echo "📦 Installing global NPM packages..."
+    while read -r pkg; do
+        if [ -n "$pkg" ]; then
+            sudo npm install -g "$pkg" || echo "⚠️ Failed to install NPM package: $pkg"
+        fi
+    done < "$DOTFILES_DIR/scripts/pkg_npm.txt"
+fi
+
+if [ -f "$DOTFILES_DIR/scripts/pkg_pip.txt" ] && command -v pip >/dev/null; then
+    echo "📦 Installing user Pip packages..."
+    pip install --user -r "$DOTFILES_DIR/scripts/pkg_pip.txt" || echo "⚠️ Some Pip packages failed to install."
+fi
+
 # 2. Restore .config files
 echo "⚙️ Restoring configuration files to $CONFIG_DIR..."
 mkdir -p "$CONFIG_DIR"
 cp -r "$DOTFILES_DIR/config/"* "$CONFIG_DIR/"
 
-# 3. Restore home directory files (including scripts)
+# 3. Restore home directory files and scripts
 echo "🏠 Restoring home directory files and scripts..."
 cp -r "$DOTFILES_DIR/home/".* "$HOME/" 2>/dev/null || true
 cp "$DOTFILES_DIR/home/"* "$HOME/" 2>/dev/null || true
-# Ensure scripts are executable
 chmod +x ~/*.sh 2>/dev/null || true
 
-# 4. Restore Web Apps (Desktop entries)
-if [ -d "$DOTFILES_DIR/webapps" ]; then
-    echo "🌐 Restoring Web App desktop entries..."
-    mkdir -p "$HOME/.local/share/applications"
-    cp "$DOTFILES_DIR/webapps/"* "$HOME/.local/share/applications/"
+# 4. Restore local binaries
+if [ -d "$DOTFILES_DIR/local-bin" ]; then
+    echo "📂 Restoring local binaries to ~/.local/bin..."
+    mkdir -p "$HOME/.local/bin"
+    cp -r "$DOTFILES_DIR/local-bin/"* "$HOME/.local/bin/"
+    chmod +x "$HOME/.local/bin/"* 2>/dev/null || true
 fi
 
-# 5. Restore themes from URLs
+# 5. Restore Desktop entries (Web Apps & Apps)
+if [ -d "$DOTFILES_DIR/desktop-entries" ]; then
+    echo "🌐 Restoring desktop entries..."
+    mkdir -p "$HOME/.local/share/applications"
+    cp "$DOTFILES_DIR/desktop-entries/"* "$HOME/.local/share/applications/"
+fi
+
+# 6. Restore themes from URLs
 if [ -f "$DOTFILES_DIR/scripts/themes_urls.txt" ]; then
-    echo "🎨 Restoring installed themes (this may take a while)..."
+    echo "🎨 Restoring installed themes..."
     mkdir -p "$THEMES_DIR"
     while IFS="|" read -r theme url; do
         if [ -n "$theme" ] && [ -n "$url" ]; then
             if [ ! -d "$THEMES_DIR/$theme" ]; then
                 echo "📥 Cloning theme: $theme..."
                 git clone --depth 1 "$url" "$THEMES_DIR/$theme" || echo "⚠️ Failed to clone $theme"
-            else
-                echo "✅ Theme $theme already exists, skipping."
             fi
         fi
     done < "$DOTFILES_DIR/scripts/themes_urls.txt"
@@ -72,4 +89,4 @@ omarchy refresh waybar || true
 omarchy refresh walker || true
 hyprctl reload || true
 
-echo "🎉 Done! You might need to restart your session for some changes to take effect."
+echo "🎉 Done!"

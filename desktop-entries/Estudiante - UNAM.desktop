@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Estudiante - UNAM
+Comment=Estudiante - UNAM
+Exec=omarchy-launch-webapp https://sigeun.unam.edu.pe/modulos/modestudiante
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/Estudiante - UNAM.png
+StartupNotify=true

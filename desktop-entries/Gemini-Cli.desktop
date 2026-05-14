@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Gemini-Cli
+Comment=Gemini-Cli
+Exec=xdg-terminal-exec --app-id=TUI.tile -e gemini
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/Gemini-Cli.png
+StartupNotify=true

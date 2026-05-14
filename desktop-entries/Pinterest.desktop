@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Pinterest
+Comment=Pinterest
+Exec=omarchy-launch-webapp https://www.pinterest.com/
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/Pinterest.png
+StartupNotify=true

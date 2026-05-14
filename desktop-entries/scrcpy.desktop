@@ -1,0 +1,26 @@
+[Desktop Entry]
+StartupWMClass=sh
+Name=scrcpy
+GenericName=Android Remote Control
+Comment=Display and control your Android device
+# For some users, the PATH or ADB environment variables are set from the shell
+# startup file, like .bashrc or .zshrc… Run an interactive shell to get
+# environment correctly initialized.
+Exec="/home/elyefris/Applications/scrcpy-1"
+Icon=scrcpy
+Type=Application
+Categories=Utility;RemoteAccess;
+StartupNotify=false
+  
+
+X-AppImage-Name=scrcpy
+X-AppImage-Version=v3.3.4
+X-AppImage-Arch=x86_64
+Actions=Uninstall;
+X-AppImage-Homepage=https://github.com/pkgforge-dev/scrcpy-AppImage
+X-AppImage-UpdateURL=https://github.com/pkgforge-dev/scrcpy-AppImage
+
+[Desktop Action Uninstall]
+Name=Move to Trash
+Exec=/home/elyefris/Applications/AppManager uninstall "/home/elyefris/Applications/scrcpy-1"
+Icon=user-trash

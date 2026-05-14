@@ -1,0 +1,21 @@
+[Desktop Entry]
+StartupWMClass=adb
+Name=adb
+Exec="/home/elyefris/Applications/adb"
+Comment=Dummy made by quick-sharun
+Type=Application
+Hidden=true
+Categories=Utility
+Icon=adb
+
+X-AppImage-Name=Android_Tools
+X-AppImage-Version=37.0.0
+X-AppImage-Arch=x86_64
+Actions=Uninstall;
+X-AppImage-Homepage=https://github.com/pkgforge-dev/android-tools-AppImage
+X-AppImage-UpdateURL=https://github.com/pkgforge-dev/android-tools-AppImage
+
+[Desktop Action Uninstall]
+Name=Move to Trash
+Exec=/home/elyefris/Applications/AppManager uninstall "/home/elyefris/Applications/adb"
+Icon=user-trash

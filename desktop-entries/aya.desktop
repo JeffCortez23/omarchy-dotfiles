@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=AYA
+Exec="/home/elyefris/Applications/AYA-1" --no-sandbox %U
+Type=Application
+Icon=aya
+StartupWMClass=AYA
+X-AppImage-Version=1.14.2
+Comment=Android adb desktop app
+Categories=Utility;
+Actions=Uninstall;
+
+[Desktop Action Uninstall]
+Name=Move to Trash
+Exec=/home/elyefris/Applications/AppManager uninstall "/home/elyefris/Applications/AYA-1"
+Icon=user-trash

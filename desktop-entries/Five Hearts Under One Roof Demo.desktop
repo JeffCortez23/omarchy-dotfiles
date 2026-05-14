@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Five Hearts Under One Roof Demo
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/3166530
+Icon=steam_icon_3166530
+Terminal=false
+Type=Application
+Categories=Game;

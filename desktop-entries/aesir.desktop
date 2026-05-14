@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Aesir
+Comment=Aplicación Aesir
+Exec=aesir
+Icon=utilities-terminal
+Type=Application
+Terminal=false
+Categories=Utility;

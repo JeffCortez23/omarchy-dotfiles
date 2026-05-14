@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Comprimir PDF GOD
+Exec=/home/elyefris/pdf_god_gui.sh
+Type=Application
+Terminal=false
+MimeType=application/pdf;

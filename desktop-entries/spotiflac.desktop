@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=SpotiFLAC
+Exec="/home/elyefris/Applications/SpotiFLAC-1"
+Icon=spotiflac
+Type=Application
+Categories=Audio;AudioVideo;
+Comment=Get Spotify tracks in true FLAC from Tidal/Deezer
+StartupWMClass=spotiflac
+Actions=Uninstall;
+
+[Desktop Action Uninstall]
+Name=Move to Trash
+Exec=/home/elyefris/Applications/AppManager uninstall "/home/elyefris/Applications/SpotiFLAC-1"
+Icon=user-trash

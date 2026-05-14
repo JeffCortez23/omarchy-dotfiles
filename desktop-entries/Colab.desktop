@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Colab
+Comment=Colab
+Exec=omarchy-launch-webapp https://colab.research.google.com/
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/Colab.png
+StartupNotify=true

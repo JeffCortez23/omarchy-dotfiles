@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Aula Virtual - UNAM
+Comment=Aula Virtual - UNAM
+Exec=omarchy-launch-webapp https://sigeun.unam.edu.pe/modulos/modaulavirtual/
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/Aula Virtual - UNAM.png
+StartupNotify=true

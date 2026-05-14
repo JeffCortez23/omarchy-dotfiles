@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Flow
+Comment=Google Flow
+Exec=omarchy-launch-webapp https://labs.google/fx/tools/flow
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/Google Flow.png
+StartupNotify=true

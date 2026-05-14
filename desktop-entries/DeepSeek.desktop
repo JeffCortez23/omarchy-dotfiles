@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=DeepSeek
+Comment=DeepSeek
+Exec=omarchy-launch-webapp https://chat.deepseek.com/
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/DeepSeek.png
+StartupNotify=true

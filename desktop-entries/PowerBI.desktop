@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=PowerBI
+Comment=PowerBI
+Exec=omarchy-launch-webapp https://app.powerbi.com/
+Terminal=false
+Type=Application
+Icon=/home/elyefris/.local/share/applications/icons/PowerBI.png
+StartupNotify=true

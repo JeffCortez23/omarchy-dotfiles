@@ -1,0 +1,2 @@
+/home/elyefris/Downloads/Ejecutables/AYA-1.14.2-linux-x86_64.AppImage
+/home/elyefris/Downloads/Otros/AYA-1.14.2-linux-x86_64.AppImage
