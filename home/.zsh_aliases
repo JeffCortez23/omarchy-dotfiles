@@ -1,0 +1,2 @@
+alias fixsims='(cd "/home/elyefris/Downloads/EA DLC Unlocker ES v3.2/EA DLC Unlocker v3.2" && ./activar_dlcs.sh)'
+alias dcam="droidcam > /dev/null 2>&1 & sleep 5 && mpv av://v4l2:/dev/video2 --profile=low-latency --untimed &"

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/arch.txt",
+    "color": {
+        "1": "red",
+        "2": "magenta"
+    },
+    "padding": {
+      "top": 3,
+      "right": 6,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      "keys": "red",
+      "separator": "white"
+    },
+    "percent": {
+      "type": 2
+    },
+    "bar": {
+      "char": {
+        "elapsed": "▬",
+        "total": "▭"
+      },
+      "width": 10
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "key": "\u001b[31m  user \u001b[37m •",
+      "color": {
+        "user": "red",
+        "at": "white",
+        "host": "magenta"
+      }
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[31m ─────────── \u001b[35m󰣇 \u001b[37msystem \u001b[31m────────────",
+      "color": "red"
+    },
+    {
+      "type": "os",
+      "key": "\u001b[35m 󰘳 os   \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "kernel",
+      "key": "\u001b[35m  krn  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "uptime",
+      "key": "\u001b[35m 󱫐 upt  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "packages",
+      "key": "\u001b[35m 󰏖 pkg  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[31m ─────────── \u001b[35m󰇄 \u001b[37mdesktop \u001b[31m───────────",
+      "color": "red"
+    },
+    {
+      "type": "wm",
+      "key": "\u001b[35m 󱂬 wm   \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "terminal",
+      "key": "\u001b[35m  tty  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "shell",
+      "key": "\u001b[35m 󱆃 shl  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[31m ─────────── \u001b[35m󰓅 \u001b[37mhardware \u001b[31m──────────",
+      "color": "red"
+    },
+    {
+      "type": "cpu",
+      "key": "\u001b[35m  cpu  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "gpu",
+      "key": "\u001b[35m 󰢮 gpu  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "memory",
+      "key": "\u001b[35m  mem  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "disk",
+      "key": "\u001b[35m 󰋊 dsk  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "battery",
+      "key": "\u001b[35m 󰁹 pwr  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[31m ─────────── \u001b[35m󰒄 \u001b[37mnetwork \u001b[31m───────────",
+      "color": "red"
+    },
+    {
+      "type": "localip",
+      "key": "\u001b[35m 󰩟 lan  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "wifi",
+      "key": "\u001b[35m  net  \u001b[37m •",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[31m ──────────────────────────────────────",
+      "color": "red"
+    },
+    "break",
+    {
+        "type": "colors",
+        "symbol": "diamond",
+        "paddingLeft": 4
+    },
+    "break"
+  ]
+}

@@ -1,0 +1,4 @@
+#!/bin/bash
+THEME_NAME=$1
+notify-send -u normal -a "Omarchy Theme Engine" -i "preferences-desktop-theme" "Theme Changed" "Setup is looking fresh with <b>$THEME_NAME</b>!"
+~/.config/fastfetch/update_colors.sh

@@ -1,0 +1,27 @@
+general {
+    lock_cmd = omarchy-system-lock
+    before_sleep_cmd = OMARCHY_LOCK_ONLY=true omarchy-system-lock
+    after_sleep_cmd = sleep 1 && omarchy-system-wake
+    inhibit_sleep = 3
+}
+
+# Dim screen before locking (after 2 minutes)
+listener {
+    timeout = 120
+    on-timeout = brightnessctl set 10%
+    on-resume = brightnessctl set 100%
+}
+
+# Start screensaver (after 2.5 minutes)
+listener {
+    timeout = 150
+    on-timeout = ~/.config/hypr/scripts/idle-handler.sh timeout-screensaver
+    on-resume = ~/.config/hypr/scripts/idle-handler.sh resume-screensaver
+}
+
+# Lock system (after 3 minutes)
+listener {
+    timeout = 180
+    on-timeout = ~/.config/hypr/scripts/idle-handler.sh timeout-lock
+    on-resume = ~/.config/hypr/scripts/idle-handler.sh resume-lock
+}

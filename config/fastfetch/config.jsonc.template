@@ -1,0 +1,146 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/arch.txt",
+    "color": {
+        "1": "__C1__",
+        "2": "__C5__"
+    },
+    "padding": {
+      "top": 3,
+      "right": 6,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      "keys": "__C1__",
+      "separator": "__C7__"
+    },
+    "percent": {
+      "type": 2
+    },
+    "bar": {
+      "char": {
+        "elapsed": "▬",
+        "total": "▭"
+      },
+      "width": 10
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "key": "__A1__  user __A7__ •",
+      "color": {
+        "user": "__C1__",
+        "at": "__C7__",
+        "host": "__C5__"
+      }
+    },
+    {
+      "type": "custom",
+      "format": "__A1__ ─────────── __A5__󰣇 __A7__system __A1__────────────",
+      "color": "__C1__"
+    },
+    {
+      "type": "os",
+      "key": "__A5__ 󰘳 os   __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "kernel",
+      "key": "__A5__  krn  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "uptime",
+      "key": "__A5__ 󱫐 upt  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "packages",
+      "key": "__A5__ 󰏖 pkg  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "custom",
+      "format": "__A1__ ─────────── __A5__󰇄 __A7__desktop __A1__───────────",
+      "color": "__C1__"
+    },
+    {
+      "type": "wm",
+      "key": "__A5__ 󱂬 wm   __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "terminal",
+      "key": "__A5__  tty  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "shell",
+      "key": "__A5__ 󱆃 shl  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "custom",
+      "format": "__A1__ ─────────── __A5__󰓅 __A7__hardware __A1__──────────",
+      "color": "__C1__"
+    },
+    {
+      "type": "cpu",
+      "key": "__A5__  cpu  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "gpu",
+      "key": "__A5__ 󰢮 gpu  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "memory",
+      "key": "__A5__  mem  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "disk",
+      "key": "__A5__ 󰋊 dsk  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "battery",
+      "key": "__A5__ 󰁹 pwr  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "custom",
+      "format": "__A1__ ─────────── __A5__󰒄 __A7__network __A1__───────────",
+      "color": "__C1__"
+    },
+    {
+      "type": "localip",
+      "key": "__A5__ 󰩟 lan  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "wifi",
+      "key": "__A5__  net  __A7__ •",
+      "keyColor": "__C5__"
+    },
+    {
+      "type": "custom",
+      "format": "__A1__ ──────────────────────────────────────",
+      "color": "__C1__"
+    },
+    "break",
+    {
+        "type": "colors",
+        "symbol": "diamond",
+        "paddingLeft": 4
+    },
+    "break"
+  ]
+}

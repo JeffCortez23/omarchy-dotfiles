@@ -1,0 +1,42 @@
+format = """
+[](#7aa2f7)\
+$os\
+$directory\
+[](fg:#7aa2f7 bg:#bb9af7)\
+$git_branch\
+$git_status\
+[](fg:#bb9af7 bg:#e0af68)\
+$cmd_duration\
+[ ](fg:#e0af68)\
+\n$character"""
+
+[os]
+disabled = false
+style = "bg:#7aa2f7 fg:#0b0d10"
+
+[os.symbols]
+Arch = "󰣇 "
+
+[directory]
+style = "bg:#7aa2f7 fg:#0b0d10"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = " "
+style = "bg:#bb9af7 fg:#0b0d10"
+format = "[[ $symbol $branch ]($style)]($style)"
+
+[git_status]
+style = "bg:#bb9af7 fg:#0b0d10"
+format = "[[($all_status$ahead_behind )]($style)]($style)"
+
+[cmd_duration]
+min_time = 500
+style = "bg:#e0af68 fg:#0b0d10"
+format = "[  $duration ]($style)"
+
+[character]
+success_symbol = "[󰄛 SUPREME](bold #7aa2f7)"
+error_symbol = "[󰄛 ERROR](bold #f7768e)"
